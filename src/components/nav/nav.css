@@ -1,0 +1,51 @@
+.navigation {
+    position: fixed;
+    left: 40px;
+    top: 50%;
+    transform: translate(-100px, -50%);
+    background-color: rgba(0, 0, 0, 0.075);
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    border-radius: 50px;
+    opacity: 0;
+    animation: fade-nav-in 1s ease 1 forwards;
+}
+
+@keyframes fade-nav-in {
+    to {
+        transform: translate(0, -50%);
+    }
+}
+
+.navigation a {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.377);
+    border-radius: 50%;
+}
+
+.icon {
+    font-size: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    transform: fill .1s ease;
+    fill: rgb(209, 217, 252);
+}
+
+.navigation .icon.active-nav {
+    fill: rgb(88, 177, 248);
+    border: 2px solid rgb(88, 177, 248);
+}
+
+.navigation .icon:hover {
+    fill: rgba(88, 117, 248, 0.151);
+    border: 2PX solid rgba(88, 117, 248, 0.192);
+}
+
+.navigation .icon.active-nav:hover {
+    fill: rgb(88, 177, 248);
+    border: 2px solid rgb(88, 177, 248);
+}
